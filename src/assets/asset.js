@@ -1,3 +1,76 @@
+export const pokemonAssetGen1 = [
+  {
+    _id: "001",
+    name: "Venusaur",
+    image: "",
+    description:
+      "For some time after its birth, it uses the nutrients that are packed into the seed on its back in order to grow. By spreading the broad petals of its flower and catching the sun’s rays, it fills its body with power.",
+    type1: "Grass",
+    type2: "Poison",
+    height: "0.71 m",
+    weight: "15.2 lbs",
+    category: "Seed",
+    ability: "Overgrow",
+    desc_ability: 'Powers up Grass-type moves when the Pokémon’s HP is low."',
+  },
+  {
+    _id: "002",
+    name: "Charizard",
+    image: "",
+    description:
+      "If Charizard becomes truly angered, the flame at the tip of its tail burns in a light blue shade. It uses its wings to fly sky-high. The more experience it gains in battle, the greater the temperature at which its flames burn.",
+    type1: "Fire",
+    type2: "Flying",
+    height: " m",
+    weight: "199.5 lbs",
+    category: "Flame",
+    ability: "Blaze",
+    desc_ability: "Powers up Fire-type moves when the Pokémon’s HP is low.",
+  },
+  {
+    _id: "003",
+    name: "Blastoise",
+    image: "",
+    description:
+      "If Charizard becomes truly angered, the flame at the tip of its tail burns in a light blue shade. It uses its wings to fly sky-high. The more experience it gains in battle, the greater the temperature at which its flames burn.",
+    type1: "Water",
+    type2: "None",
+    height: "1.60 m",
+    weight: "188.5 lbs",
+    category: "Shellfish",
+    ability: "Torrent",
+    desc_ability: "Powers up Water-type moves when the Pokémon’s HP is low.",
+  },
+  {
+    _id: "004",
+    name: "Butterfree",
+    image: "",
+    description:
+      "It loves the nectar of flowers and can locate flower patches that have even tiny amounts of pollen. It loves the nectar of flowers and can locate flower patches that have even tiny amounts of pollen.",
+    type1: "Bug",
+    type2: "Flying",
+    height: "1.09 m",
+    weight: "70.5 lbs",
+    category: "Butterfly",
+    ability: "Compound Eyes",
+    desc_ability: "The Pokémon’s compound eyes boost its accuracy.",
+  },
+  {
+    _id: "005",
+    name: "Beedrill",
+    image: "",
+    description:
+      "It has three poisonous stingers on its forelegs and its tail. They are used to jab its enemy repeatedly.",
+    type1: "Bug",
+    type2: "Poison",
+    height: "0.99 m",
+    weight: "65.0 lbs",
+    category: "Poison Bee",
+    ability: "Swarm",
+    desc_ability: "Powers up Bug-type moves when the Pokémon’s HP is low.",
+  },
+];
+
 export const pokemonAssetGen2 = [ 
     {   
         _id: "006",
@@ -141,3 +214,4 @@ export const pokemonAssetGen3 = [
         desc_ability: "The Pokémon makes it rain when it enters a battle."
     }
 ]
+
