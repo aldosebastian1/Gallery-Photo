@@ -45,7 +45,6 @@ const Navbar = () => {
             aria-label="Submit search"
           >
             <img src={asset.search} className="icon-search" alt="" />
-            {/* 🔍 */}
           </button>
         </form>
       </div>
