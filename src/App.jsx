@@ -10,7 +10,7 @@ import Navbar from "./Gallery/components/Navbar/Navbar";
 
 function App() {
   return (
-   <Router>
+    <Router>
       <Navbar />
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}

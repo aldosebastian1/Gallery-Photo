@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import { asset } from "../../../assets/asset";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState("home");
@@ -43,7 +44,8 @@ const Navbar = () => {
             className="search-btn"
             aria-label="Submit search"
           >
-            🔍
+            <img src={asset.search} className="icon-search" alt="" />
+            {/* 🔍 */}
           </button>
         </form>
       </div>
