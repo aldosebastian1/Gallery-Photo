@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import ImageCard from '../components/ImageCard';
+// import ImageCard from '../components/ImageCard';
+import { pokemonAssetGen1, pokemonAssetGen2, pokemonAssetGen3 } from '../../assets/asset';
 
 function GalleryPage() {
   const [images, setImages] = useState([]);
@@ -11,6 +12,14 @@ function GalleryPage() {
     const savedImages = localStorage.getItem('galleryImages');
     if (savedImages) {
       setImages(JSON.parse(savedImages));
+    } else {
+      const seed = [
+        ...pokemonAssetGen1.map(p => ({id: Number(p._id), url: p.image, title: p.name})),
+        ...pokemonAssetGen2.map(p => ({id: Number(p._id), url: p.image, title: p.name})),
+        ...pokemonAssetGen3.map(p => ({id: Number(p._id), url: p.image, title: p.name})),
+      ];
+      localStorage.setItem('galleryImages', JSON.stringify(seed));
+      setImages(seed);
     }
   }, []);
 

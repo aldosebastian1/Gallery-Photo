@@ -3,15 +3,18 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Dashboard from './Gallery/Page/Dashboard';
 import GalleryPage from "./Gallery/Page/GalleryPage";
 import ImageDetail from "./Gallery/Page/ImageDetail";
+// import Home from "./Gallery/Page/Home";
+import Pokedex from "./Gallery/Page/Pokedex";
 import "./index.css";
 import Navbar from "./Gallery/components/Navbar/Navbar";
 
 function App() {
   return (
-    <Router>
+   <Router>
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Navbar />} />
-        {/* <Route path="/" element={<Dashboard />} /> */}
+        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/pokedex" element={<Pokedex />} />
         <Route path="/galeri" element={<GalleryPage />} />
         <Route path="/detail/:id" element={<ImageDetail />} />
       </Routes>

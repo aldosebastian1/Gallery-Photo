@@ -1,5 +1,3 @@
-import logo from "./logo.png";
-
 import p_001 from "./001.png";
 import p_002 from "./002.png";
 import p_003 from "./003.png";
