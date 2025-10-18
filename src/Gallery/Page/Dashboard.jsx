@@ -1,42 +1,56 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import '../../index.css';
 
-function Dashboard() {
-    const [imageCount, setImageCount] = useState(0);
+function Home() {
+  return (
+    <div className="home-container">
+      {/* Banner Promosi Utama */}
+      <section className="banner">
+        https://assets.pokemon.com/assets/cms2/img/misc/legends/z-a/banner.jpg
+        <h1>Lumiose City Is Waiting</h1>
+        <p>Pokémon Legends: Z-A – Coming to Nintendo Switch</p>
+      </section>
 
-    useEffect(() => {
-        const savedImages = JSON.parse(localStorage.getItem('galleryImages')) || [];
-        setImageCount(savedImages.length);
-    }, []);
-
-    return (
-        <div className="dashboard-container">
-            <header className="dashboard-header">
-                <h1>📸 WEB GALERI FOTO</h1>
-                <nav>
-                    <ul>
-                        <li><Link to="/">Dashboard</Link></li>
-                        <li><Link to="/galeri">Galeri Foto</Link></li>
-                    </ul>
-                </nav>
-            </header>
-
-            <section className="dashboard-content">
-                <h2>Selamat Datang di Website Galeri Foto</h2>
-                <p>Simpan foto Anda untuk menjadi kenang-kenangan.</p>
-                <img
-                    src="https://via.placeholder.com/600x200?text=Galeri+Foto"
-                    alt="Banner Galeri"
-                    className="dashboard-banner"
-                />
-                <p>Total Foto Tersimpan: <strong>{imageCount}</strong></p>
-                <Link to="/galeri">
-                    <button className="btn-primary">Lihat Galeri</button>
-                </Link>
-            </section>
+      {/* Iklan Merchandise */}
+      <section className="section promo">
+        <h2>🛍️ Merchandise Terbaru</h2>
+        <div className="promo-card">
+          https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png
+          <div>
+            <p><strong>Mug Pikachu & Eevee</strong></p>
+            <p>Tersedia di Pokémon Center dengan desain eksklusif!</p>
+          </div>
         </div>
-    );
+      </section>
+
+      {/* Berita & Event */}
+      <section className="section news">
+        <h2>📣 Berita & Event</h2>
+        <div className="news-item">
+          <h3>🎉 Pokémon Legends: Z-A Celebration</h3>
+          <p>Ikuti event spesial di Pokémon GO dan dapatkan hadiah eksklusif!</p>
+        </div>
+        <div className="news-item">
+          <h3>⚔️ Ranked Battles Season Dimulai!</h3>
+          <p>Uji kemampuanmu di Ranked Battles Season pertama!</p>
+        </div>
+        <div className="news-item">
+          <h3>🎓 Leveling System Baru</h3>
+          <p>Capai level 80 di Pokémon GO dengan sistem leveling terbaru!</p>
+        </div>
+      </section>
+
+      {/* Update Mingguan */}
+      <section className="section weekly">
+        <h2>🗓️ What's New This Week</h2>
+        <ul>
+          <li>🎃 Deck TCG bertema Halloween telah dirilis!</li>
+          <li>⚔️ Event PvP baru tersedia di Pokémon Unite!</li>
+          <li>🧩 Puzzle mingguan tersedia di Pokémon Café Remix!</li>
+        </ul>
+      </section>
+    </div>
+  );
 }
 
-export default Dashboard;
+export default Home;
