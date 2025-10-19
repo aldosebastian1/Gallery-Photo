@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .navbar-bg {
@@ -14,7 +15,6 @@
 }
 
 .navbar .logo {
-  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   font-size: 20px;
@@ -28,6 +28,30 @@
   gap: 20px;
   color: white;
   font-size: 18px;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 4px 2px;
+  font-weight: 500;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.navbar-menu a:hover,
+.navbar-menu a:focus {
+  text-decoration: none;
+  color: #315481;
+  opacity: 0.95;
+}
+
+.navbar-menu a.active {
+  text-decoration: none;
+  color: white;
+  padding-bottom: 2px;
+  border-bottom: 2px solid white;
 }
 
 .navbar-right {
@@ -116,4 +140,23 @@
 .search-btn:focus {
   outline: 2px solid rgba(255, 255, 255, 0.18);
   outline-offset: 2px;
+}
+
+/* Responsive: hide search controls on small screens */
+@media (max-width: 600px) {
+  .search-bar.compact,
+  .search-input,
+  .search-btn {
+    display: none;
+  }
+
+  /* tighten navbar spacing on small screens */
+  .navbar-menu {
+    gap: 12px;
+    font-size: 16px;
+  }
+
+  .navbar-bg {
+    padding: 8px 12px;
+  }
 }

@@ -1,26 +1,30 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { asset } from "../../../assets/asset";
 
 const Navbar = () => {
-  const [navbar, setNavbar] = useState("home");
   const [query, setQuery] = useState("");
 
   return (
     <div className="navbar navbar-bg">
       <p className="logo">GALLERY IMAGE</p>
       <ul className="navbar-menu">
-        <li
-          onClick={() => setNavbar("home")}
-          className={navbar === "home" ? "active" : ""}
-        >
-          Home
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Home
+          </NavLink>
         </li>
-        <li
-          onClick={() => setNavbar("pokemon")}
-          className={navbar === "pokemon" ? "active" : ""}
-        >
-          Pokemon
+        <li>
+          <NavLink
+            to="/pokedex"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Pokemon
+          </NavLink>
         </li>
       </ul>
       <div className="navbar-right">
@@ -44,7 +48,7 @@ const Navbar = () => {
             className="search-btn"
             aria-label="Submit search"
           >
-            <img src={asset.search} className="icon-search" alt="" />
+            <img src={asset.search} className="icon-search" alt="search" />
           </button>
         </form>
       </div>
