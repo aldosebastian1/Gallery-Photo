@@ -1,0 +1,64 @@
+/* Dashboard: responsive 3-column grid using flexbox */
+.dashboard-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+  align-items: stretch;
+}
+
+.dashboard-container {
+  flex: 1 1 calc(33.333% - 16px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(44, 41, 41, 0.06);
+}
+
+.img-dashboard img {
+  width: 100%;
+  height: auto;
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.text-dashboard h2 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #0f172a;
+}
+
+.text-dashboard p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .dashboard-list {
+    flex-direction: column;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .dashboard-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .text-dashboard h2 {
+    font-size: 16px;
+  }
+
+  .text-dashboard p {
+    font-size: 13px;
+  }
+}
