@@ -6,7 +6,7 @@ import { dashboard1, dashboard2 } from "../../assets/asset.js";
 function DashboardDisplay() {
   return (
     <div>
-      <section className="dashboard-list" aria-label="Featured">
+      <section className="dashboard-list featured" aria-label="Featured">
         {dashboard1.map((item) => (
           <DashboardItem
             key={item.id}

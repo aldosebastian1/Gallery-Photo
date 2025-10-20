@@ -13,7 +13,7 @@
 
 .navbar-bg {
   background: linear-gradient(90deg, #315481 0%, #7793ba 50%);
-  padding: 25px 18px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(30, 41, 59, 0.06);
 }
@@ -26,6 +26,20 @@
   color: white;
   font-weight: 700;
 }
+
+.navbar .logo--right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.navbar .logo--right img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
+}
+
 .navbar-menu {
   display: flex;
   list-style: none;
@@ -54,6 +68,11 @@
   opacity: 0.95;
 }
 
+.navbar-menu a:focus-visible {
+  outline: 2px dashed rgba(255, 255, 255, 0.25);
+  outline-offset: 4px;
+}
+
 .navbar-menu a.active {
   text-decoration: none;
   color: white;
@@ -61,19 +80,7 @@
   border-bottom: 2px solid white;
 }
 
-.navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
 @media (max-width: 600px) {
-  .search-bar.compact,
-  .search-input,
-  .search-btn {
-    display: none;
-  }
-
   .navbar-menu {
     gap: 12px;
     font-size: 16px;
@@ -83,5 +90,15 @@
 
   .navbar-bg {
     padding: 8px 12px;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .navbar .logo--right img {
+    width: 34px;
+    height: 34px;
   }
 }
