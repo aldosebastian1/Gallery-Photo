@@ -65,6 +65,17 @@
   animation: fadeIn 360ms ease-out forwards;
 }
 
+.dashboard-container:hover {
+  transform: translateY(-4px);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
+}
+
+.dashboard-container:focus-within {
+  outline: 2px solid rgba(99, 102, 241, 0.08);
+  outline-offset: 2px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -74,17 +85,4 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Card hover: subtle lift and shadow to emphasize interactivity */
-.dashboard-container:hover {
-  transform: translateY(-4px);
-  transition: transform 200ms ease, box-shadow 200ms ease;
-  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
-}
-
-/* Make links/nav focus visible in cards (if images or sections become focusable) */
-.dashboard-container:focus-within {
-  outline: 2px solid rgba(99, 102, 241, 0.08);
-  outline-offset: 2px;
 }
