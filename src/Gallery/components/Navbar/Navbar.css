@@ -142,7 +142,6 @@
   outline-offset: 2px;
 }
 
-/* Responsive: hide search controls on small screens */
 @media (max-width: 600px) {
   .search-bar.compact,
   .search-input,
@@ -150,7 +149,6 @@
     display: none;
   }
 
-  /* tighten navbar spacing on small screens */
   .navbar-menu {
     gap: 12px;
     font-size: 16px;

@@ -1,0 +1,41 @@
+.dashboard-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+  align-items: stretch;
+}
+
+.dashboard-section {
+  margin-top: 28px;
+}
+
+.dashboard-section-title {
+  margin: 0;
+  padding-left: 20px;
+  color: #0f172a;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .dashboard-list {
+    flex-direction: column;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .dashboard-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .text-dashboard h2 {
+    font-size: 16px;
+  }
+
+  .text-dashboard p {
+    font-size: 13px;
+  }
+}

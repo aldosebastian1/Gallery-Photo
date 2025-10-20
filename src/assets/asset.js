@@ -1,5 +1,16 @@
 import search from "./search.png";
 
+import b_01 from "../assets/b_01.png";
+import b_02 from "../assets/b_02.png";
+import b_03 from "../assets/b_03.png";
+
+import d_01 from "../assets/d_01.png";
+import d_02 from "../assets/d_02.png";
+import d_03 from "../assets/d_03.png";
+import d_04 from "../assets/d_04.png";
+import d_05 from "../assets/d_05.png";
+import d_06 from "../assets/d_06.png";
+
 import p_001 from "./001.png";
 import p_002 from "./002.png";
 import p_003 from "./003.png";
@@ -253,5 +264,77 @@ export const pokemonAssetGen3 = [
     category: "Sea Basin",
     ability: "Drizzle",
     desc_ability: "The Pokémon makes it rain when it enters a battle.",
+  },
+];
+
+export const dashboard1 = [
+  {
+    id: "01",
+    image: b_01,
+    judul: "Lumiose City Menunggu",
+    description:
+      "Mulailah bermain Pokémon Legends: Z-A di Nintendo Switch atau Nintendo Switch 2 hari ini.",
+  },
+  {
+    id: "02",
+    image: b_02,
+    judul: "Masuki Z-A Royale di Pokémon Legends: Z-A",
+    description:
+      "Pelajari seluk-beluk turnamen ini di mana Anda naik dari peringkat Z ke peringkat A.",
+  },
+  {
+    id: "03",
+    image: b_03,
+    judul:
+      "Tantang Musim Pertempuran Peringkat Z-A Pertama dari Pokémon Legends",
+    description:
+      "Hadapi pemain dari seluruh dunia untuk menaiki peringkat dan mendapatkan hadiah dalam game, termasuk batu Grenjinite.",
+  },
+];
+
+export const dashboard2 = [
+  {
+    id: "01",
+    image: d_01,
+    judul:
+      "Mulailah petualangan legendaris dalam Pokémon Legends: Z-A Celebration Event",
+    description:
+      "Rayakan perilisan Pokémon Legends: Z-A dengan Mega Raids, Timed Research gratis, dan lainnya.",
+  },
+  {
+    id: "02",
+    image: d_02,
+    judul: "Warni-warni yang Mega, Seni yang Megah dari Mega Evolution",
+    description:
+      "Kagumi karya seni yang ditemukan di seluruh permainan kartu Pokémon Trading Card: ekspansi Mega Evolution.",
+  },
+  {
+    id: "03",
+    image: d_03,
+    judul: "Tantang Musim Pertama Pertempuran Skor Pokémon Legends: Z-A",
+    description:
+      "Menghadapi pemain dari seluruh dunia untuk menaikkan peringkat dan memperoleh hadiah dalam permainan, termasuk batu Greninja.",
+  },
+  {
+    id: "04",
+    image: d_04,
+    judul:
+      "Tetap Persiapkan Diri Anda untuk Pertempuran Skor Pokémon Legends: Z-A",
+    description:
+      "Panduan rintisan kami memberikan semua detail tentang cara berpartisipasi dalam mode permainan online yang sengit ini.",
+  },
+  {
+    id: "05",
+    image: d_05,
+    judul: "Lima puluh itu Gigih, tetapi Delapan-puluh itu Hebat!",
+    description:
+      "Para pemain Pokémon GO bisa meraih ketinggian yang lebih besar dengan sistem level baru.",
+  },
+  {
+    id: "06",
+    image: d_06,
+    judul: "Daftar TCG Pokémon Tema Halloween yang Seram, Menakutkan",
+    description:
+      "Kirimkan gemetar ke tulang-belulang semua yang bertarung dengan empat ide untuk dek Pokémon TCG bertema Halloween.",
   },
 ];
