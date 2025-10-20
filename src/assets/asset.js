@@ -1,4 +1,5 @@
 import search from "./search.png";
+import logo from "./logo.jpg";
 
 import b_01 from "../assets/b_01.png";
 import b_02 from "../assets/b_02.png";
@@ -29,6 +30,7 @@ import p_015 from "./015.png";
 
 export const asset = {
   search,
+  logo,
 };
 
 export const pokemonAssetGen1 = [

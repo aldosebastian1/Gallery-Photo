@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
+import { asset } from "../../../assets/asset";
 
 const Navbar = () => {
   return (
@@ -24,6 +25,9 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
+      <div className="logo logo--right">
+        <img src={asset.logo} alt="site logo" />
+      </div>
     </div>
   );
 };
