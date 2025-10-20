@@ -6,16 +6,32 @@
   align-items: stretch;
 }
 
+.dashboard-list:first-of-type {
+  margin-top: 20px;
+}
+
 .dashboard-section {
-  margin-top: 28px;
+  margin-top: 15px;
+}
+
+/* Tablet: switch to two columns for better readability */
+@media (max-width: 900px) {
+  .dashboard-container {
+    flex: 1 1 calc(50% - 16px);
+  }
 }
 
 .dashboard-section-title {
-  margin: 0;
+  margin: 20px 0 6px 0;
   padding-left: 20px;
   color: #0f172a;
   font-size: 20px;
   font-weight: 600;
+}
+
+.dashboard-section > .dashboard-list {
+  padding-top: 8px;
+  margin-top: 0;
 }
 
 @media (max-width: 600px) {

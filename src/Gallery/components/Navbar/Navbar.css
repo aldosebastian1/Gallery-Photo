@@ -68,6 +68,11 @@
   opacity: 0.95;
 }
 
+.navbar-menu a:focus-visible {
+  outline: 2px dashed rgba(255, 255, 255, 0.25);
+  outline-offset: 4px;
+}
+
 .navbar-menu a.active {
   text-decoration: none;
   color: white;
@@ -75,18 +80,10 @@
   border-bottom: 2px solid white;
 }
 
-.navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
+/* removed unused .navbar-right block (no matching markup) */
 
 @media (max-width: 600px) {
-  .search-bar.compact,
-  .search-input,
-  .search-btn {
-    display: none;
-  }
+  /* removed search-related selectors (search form was removed from markup) */
 
   .navbar-menu {
     gap: 12px;
@@ -98,15 +95,11 @@
   .navbar-bg {
     padding: 8px 12px;
   }
-  /* On small screens place logo and menu stacked and center both */
   .navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
-  }
-  .navbar .logo--right {
-    justify-self: center;
   }
   .navbar .logo--right img {
     width: 34px;

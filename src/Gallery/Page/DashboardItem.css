@@ -20,6 +20,32 @@
   display: block;
 }
 
+.img-dashboard {
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.img-dashboard img {
+  display: block;
+  width: 100%;
+  transition: transform 220ms ease, box-shadow 220ms ease; /* transisi halus */
+}
+
+.img-dashboard:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.12);
+  cursor: pointer;
+}
+
+.img-dashboard:focus-within img {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.12);
+}
+.img-dashboard:focus-within {
+  outline: 2px solid rgba(99, 102, 241, 0.12);
+  outline-offset: 2px;
+}
+
 .text-dashboard h2 {
   margin: 0;
   font-size: 16px;
@@ -48,4 +74,17 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Card hover: subtle lift and shadow to emphasize interactivity */
+.dashboard-container:hover {
+  transform: translateY(-4px);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
+}
+
+/* Make links/nav focus visible in cards (if images or sections become focusable) */
+.dashboard-container:focus-within {
+  outline: 2px solid rgba(99, 102, 241, 0.08);
+  outline-offset: 2px;
 }
