@@ -1,5 +1,6 @@
+// backup of src/App.jsx before deploy fixes (2025-10-20)
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GalleryPage from "./Gallery/Page/GalleryPage";
 import ImageDetail from "./Gallery/Page/ImageDetail";
 import Pokedex from "./Gallery/Page/Pokedex";
