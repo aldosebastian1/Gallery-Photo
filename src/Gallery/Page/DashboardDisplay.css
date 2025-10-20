@@ -14,7 +14,6 @@
   margin-top: 15px;
 }
 
-/* Tablet: switch to two columns for better readability */
 @media (max-width: 900px) {
   .dashboard-container {
     flex: 1 1 calc(50% - 16px);
