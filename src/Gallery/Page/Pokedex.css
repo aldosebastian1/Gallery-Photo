@@ -2,7 +2,7 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem 1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #333;
   text-align: center;
 }
@@ -109,7 +109,7 @@
 
 .image-card img {
   width: 100%;
-  max-width: 140px;     
+  max-width: 140px;
   height: auto;
   object-fit: contain;
   margin: 0 auto;
@@ -141,7 +141,7 @@
   }
 
   .image-card img {
-    max-width: 110px; 
+    max-width: 110px;
   }
 }
 
