@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import GalleryPage from "./Gallery/Page/GalleryPage";
 import ImageDetail from "./Gallery/Page/ImageDetail";
 import Pokedex from "./Gallery/Page/Pokedex";
