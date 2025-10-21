@@ -6,14 +6,14 @@ import { asset } from "../../../assets/asset";
 const Navbar = () => {
   return (
     <div className="navbar navbar-bg">
-      <p className="logo">GALLERY IMAGE</p>
+      <p className="logo">POKÉMON</p>
       <ul className="navbar-menu">
         <li>
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            Home
+            HOME
           </NavLink>
         </li>
         <li>
@@ -21,7 +21,7 @@ const Navbar = () => {
             to="/pokedex"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            Pokemon
+            POKÉDEX
           </NavLink>
         </li>
       </ul>
