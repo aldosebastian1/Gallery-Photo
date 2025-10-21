@@ -1,18 +1,17 @@
-import React, { useMemo, useState } from "react";
-import ImageCard from "../components/ImageCard";
+import React, { useMemo, useState, useEffect } from 'react';
+import ImageCard from '../components/ImageCard';
 import {
   pokemonAssetGen1,
   pokemonAssetGen2,
   pokemonAssetGen3,
-} from "../../assets/asset";
-import "./pokedex.css";
+} from '../../assets/asset';
+import './pokedex.css';
 
 function Pokedex() {
   const [activeGen, setActiveGen] = useState(1);
-  const [query, setQuery] = useState("");
-  const [submittedQuery, setSubmittedQuery] = useState("");
+  const [query, setQuery] = useState('');
+  const [searchResults, setSearchResults] = useState(null);
 
-  //useMemo biar nggak recreate object tiap render
   const genMap = useMemo(
     () => ({
       1: pokemonAssetGen1,
@@ -22,46 +21,46 @@ function Pokedex() {
     []
   );
 
-  const defaultVisible = useMemo(
-    () => genMap[activeGen].slice(0, 5),
-    [genMap, activeGen]
-  );
+  const defaultVisible = useMemo(() => {
+    const gen = genMap[activeGen] ?? [];
+    return gen.slice(0, 5);
+  }, [genMap, activeGen]);
 
-  const searchResults = useMemo(() => {
+  useEffect(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return null;
+    if (!q) {
+      setSearchResults(null);
+      return;
+    }
     const all = [...pokemonAssetGen1, ...pokemonAssetGen2, ...pokemonAssetGen3];
-    return all.filter((p) => p.name.toLowerCase().includes(q));
-  }, [submittedQuery]);
+    const filtered = all.filter((p) => p.name.toLowerCase().includes(q));
+    setSearchResults(filtered);
+  }, [query]);
 
   const visible = searchResults ?? defaultVisible;
 
   return (
     <div className="pokedex-page">
-      <h2>Pokedex</h2>
+      <h2>POKÉDEX</h2>
 
       <div className="pokedex-controls">
-        <div
-          className="pokedex-buttons"
-          role="tablist"
-          aria-label="Generations"
-        >
+        <div className="pokedex-buttons" role="tablist" aria-label="Generations">
           <button
-            className={activeGen === 1 ? "active" : ""}
+            className={activeGen === 1 ? 'active' : ''}
             onClick={() => setActiveGen(1)}
             aria-pressed={activeGen === 1}
           >
             GEN 1
           </button>
           <button
-            className={activeGen === 2 ? "active" : ""}
+            className={activeGen === 2 ? 'active' : ''}
             onClick={() => setActiveGen(2)}
             aria-pressed={activeGen === 2}
           >
             GEN 2
           </button>
           <button
-            className={activeGen === 3 ? "active" : ""}
+            className={activeGen === 3 ? 'active' : ''}
             onClick={() => setActiveGen(3)}
             aria-pressed={activeGen === 3}
           >
@@ -73,7 +72,6 @@ function Pokedex() {
           className="pokedex-search"
           onSubmit={(e) => {
             e.preventDefault();
-            setSubmittedQuery(query);
           }}
         >
           <input
@@ -91,13 +89,11 @@ function Pokedex() {
         {visible && visible.length > 0 ? (
           visible.map((p) => (
             <div key={p._id} className="image-card">
-              <ImageCard
-                image={{ id: Number(p._id), url: p.image, title: p.name }}
-              />
+              <ImageCard image={{ id: p._id, url: p.image, title: p.name }} />
             </div>
           ))
         ) : (
-          <p>Pokemon not found.</p>
+          <p>Pokémon not found.</p>
         )}
       </div>
     </div>

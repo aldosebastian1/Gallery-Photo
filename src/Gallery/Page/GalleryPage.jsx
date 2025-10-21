@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-// import ImageCard from '../components/ImageCard';
+import ImageCard from '../components/ImageCard';
 import { pokemonAssetGen1, pokemonAssetGen2, pokemonAssetGen3 } from '../../assets/asset';
 
 function GalleryPage() {

@@ -1,10 +1,11 @@
 import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import GalleryPage from "./Gallery/Page/GalleryPage";
-import ImageDetail from "./Gallery/Page/ImageDetail";
+// import ImageDetail from "./Gallery/Page/ImageDetail";
 import Pokedex from "./Gallery/Page/Pokedex";
 import Navbar from "./Gallery/components/Navbar/Navbar";
 import DashboardDisplay from "./Gallery/Page/DashboardDisplay";
+import PokemonDetail from "./Gallery/Page/PokemonDetail";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path="/" element={<DashboardDisplay />} />
         <Route path="/pokedex" element={<Pokedex />} />
         <Route path="/galeri" element={<GalleryPage />} />
-        <Route path="/detail/:id" element={<ImageDetail />} />
+        <Route path="/detail/:id" element={<PokemonDetail />} />
       </Routes>
     </Router>
   );
