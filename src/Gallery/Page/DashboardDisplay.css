@@ -1,3 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+.dashboard-welcome {
+  background-color: #f0f8ff;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.dashboard-welcome h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-welcome p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
 .dashboard-list {
   display: flex;
   flex-wrap: wrap;
@@ -21,11 +46,12 @@
 }
 
 .dashboard-section-title {
+  font-family: "Roboto", sans-serif;
   margin: 20px 0 6px 0;
   padding-left: 20px;
   color: #0f172a;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 23px;
+  font-weight: 700;
 }
 
 .dashboard-section > .dashboard-list {
