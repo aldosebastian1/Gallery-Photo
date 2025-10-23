@@ -1,16 +1,49 @@
-# React + Vite
+# Gallery-Photo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ringkasan singkat:
 
-Currently, two official plugins are available:
+Gallery-Photo adalah aplikasi web kecil berbasis React yang menampilkan kumpulan gambar dalam tampilan dashboard. Aplikasi ini memiliki komponen untuk menampilkan kartu gambar, navbar, dan halaman detail (struktur ada di folder `src/Gallery`).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Fitur utama:
 
-## React Compiler
+- Dashboard grid untuk menampilkan gambar (komponen: `DashboardDisplay`, `DashboardItem`).
+- Komponen kartu gambar (`ImageCard`) dengan efek hover.
+- Navbar sederhana (`Navbar`).
+- Halaman detail untuk setiap item (file di `src/Gallery/Page`).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Struktur proyek (ringkasan):
 
-## Expanding the ESLint configuration
+- `index.html` — root HTML.
+- `src/index.jsx` — entry React.
+- `src/App.jsx` — root React component.
+- `src/Gallery` — folder komponen terkait gallery dan halaman.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Menjalankan aplikasi (Windows PowerShell):
+
+1. Pasang dependensi:
+
+```powershell
+npm install
+```
+
+2. Jalankan dev server (Vite):
+
+```powershell
+npm run dev
+```
+
+3. Buka URL yang ditampilkan (mis. http://localhost:5173) di browser.
+
+Tips debugging singkat:
+
+- Jika aplikasi tidak merender apa pun, periksa `index.html` untuk `id` root yang cocok dengan `src/index.jsx`.
+- Lihat console browser dan terminal dev server untuk pesan error.
+
+Catatan Git (mengatur riwayat):
+
+- Jika Anda perlu membatalkan merge atau commit tertentu, berhati-hatilah saat menggunakan `git reset --hard` dan `git push --force`; gunakan `git revert` jika ingin cara yang lebih aman.
+
+Lisensi & kontak:
+
+- Penulis: Aldo Sebastian
+- Project ini adalah tugas kuliah; gunakan sesuai kebutuhan dengan atribusi.
